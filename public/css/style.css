@@ -7,6 +7,7 @@ body {
  background-size: cover;
   }
   .container {
+      max-width: 100%;
     width: 600px;
     margin: 0 auto;
     position: absolute;
@@ -19,6 +20,7 @@ body {
   }
 
   fieldset {
+      max-width: 100%;
     display: block;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
@@ -37,6 +39,7 @@ body {
   }
 
   .ghost-input, p {
+      max-width: 70%;
     display: block;
     font-weight:300;
     width: 100%;
