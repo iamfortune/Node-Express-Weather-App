@@ -21,6 +21,7 @@ body {
   fieldset {
       max-width: 100%;
     display: block;
+      margin: auto;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-before: 0em;
