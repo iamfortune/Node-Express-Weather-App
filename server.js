@@ -1,8 +1,16 @@
+const { Pool } = require('pg');
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const app = express();
 require('dotenv').config();
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+});
 
 const apiKey = process.env.API_KEY;
 

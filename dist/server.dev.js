@@ -1,5 +1,8 @@
 "use strict";
 
+var _require = require('pg'),
+    Pool = _require.Pool;
+
 var express = require("express");
 
 var bodyParser = require("body-parser");
@@ -10,6 +13,12 @@ var app = express();
 
 require('dotenv').config();
 
+var pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 var apiKey = process.env.API_KEY;
 app.use(express["static"]("public"));
 app.use(bodyParser.urlencoded({
