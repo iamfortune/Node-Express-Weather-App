@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <fieldset>
+        <div class="content">
             <form action="/" method="post">
                 <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required />
                 <input id="submit" type="submit" class="ghost-button" value="Get Weather" />
@@ -21,7 +21,7 @@
             <% } %> <% if(error !== null){ %>
             <p><%= error %></p>
             <% } %>
-        </fieldset>
+        </div>
     </div>
 </body>
 
